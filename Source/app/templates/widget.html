@@ -1,10 +1,10 @@
 <svg
-  width="496"
+  width="495"
   height="160"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
-  <foreignObject width="496" height="160">
+  <foreignObject width="495" height="160">
     <div xmlns="http://www.w3.org/1999/xhtml" class="container">
       <style>
         /* CSS Reset */
@@ -22,8 +22,8 @@
         /* Actual Styles */
         main {
             display: flex;
-            padding: 10px;
-            border-radius: 3px;
+            padding: 20px;
+            border-radius: 5px;
             background: {{ background_color }};
         }
         .scan-code {
@@ -34,7 +34,7 @@
             border-radius: 5px;
         }
         aside {
-            width: 320px;
+            width: 485px;
             display: flex;
             position: relative;
             {% if base_64_scan_code %}
@@ -42,8 +42,8 @@
             {% endif %}
         }
         .cover {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             {% if spin %}
                 border-radius: 50%;
                 animation: spin 0ms -800ms linear infinite;
