@@ -143,11 +143,13 @@
               </div>
               <div class="bar-container">{{eq_bars_html|safe}}</div>
             </section>
-            <img
-              class="scan-code"
-              src="data:image/png;base64, {{base_64_scan_code}}"
-              alt="Scan Code"
-            />
+            {% if base_64_scan_code %}
+              <img
+                class="scan-code"
+                src="data:image/png;base64, {{base_64_scan_code}}"
+                alt="Scan Code"
+              />
+            {% endif %}
           </aside>
         </main>
       </a>
