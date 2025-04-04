@@ -38,9 +38,9 @@
             width: 100%;
             display: flex;
             position: relative;
-            {% if base_64_scan_code %}
+            /*{% if base_64_scan_code %}
                 left: -70px;
-            {% endif %}
+            {% endif %}*/
         }
         .cover {
             width: 55px;
@@ -88,9 +88,6 @@
             overflow: hidden;
             max-width: 205px;
             color: {{ title_color }};
-            {% if not base_64_scan_code %}
-                margin-left: 20px;
-            {% endif %}
         }
         p {
             margin-top: 5px;
