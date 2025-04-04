@@ -1,9 +1,19 @@
-<svg
-  width="420"
-  height="60"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
->
+
+{% if base_64_scan_code %}
+  <svg
+    width="420"
+    height="60"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+{% else %}
+  <svg
+    width="260"
+    height="60"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >    
+{% endif %}
   <foreignObject width="420" height="60">
     <div xmlns="http://www.w3.org/1999/xhtml" class="container">
       <style>
