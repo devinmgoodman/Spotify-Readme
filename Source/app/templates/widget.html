@@ -84,7 +84,7 @@
             text-overflow: ellipsis;
             display: block;
             overflow: hidden;
-            max-width: 190px;
+            max-width: 205px;
             color: {{ title_color }};
             {% if not base_64_scan_code %}
                 margin-left: 20px;
@@ -92,13 +92,13 @@
         }
         p {
             margin-top: 5px;
-            font-size: 0.75em;
+            font-size: 0.65em;
             font-weight: 500;
             white-space: nowrap;
             text-overflow: ellipsis;
             display: block;
             overflow: hidden;
-            max-width: 190px;
+            max-width: 205px;
             color: {{ subtitle_color }};
         }
         .logo {
@@ -108,6 +108,7 @@
         .bar-container {
             display: flex;
             animation: rainbow 0ms -800ms linear infinite;
+            max-width: 190px;
         }
         .bar {
             border-radius: 3px 3px 0 0;
