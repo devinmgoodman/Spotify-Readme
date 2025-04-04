@@ -59,7 +59,7 @@
         }
         section {
             padding-left: 5px;
-            width: 100%;
+            /*width: 100%;*/
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -157,11 +157,11 @@
               <div class="info">
                 <div class="top">
                   {% if not base_64_scan_code %}
-                  <img
+                  <!-- img
                     class="logo"
                     src="data:image/png;base64, {{logo}}"
                     alt="Spotify Logo"
-                  />
+                  / -->
                   {% endif %}
                   <h1>{{track_name}}</h1>
                 </div>
