@@ -14,7 +14,11 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
   >    
 {% endif %}
-  <foreignObject width="420" height="60">
+  {% if base_64_scan_code %}
+    <foreignObject width="420" height="60">
+{% else %}
+    <foreignObject width="260" height="60">
+{% endif %}
     <div xmlns="http://www.w3.org/1999/xhtml" class="container">
       <style>
         /* CSS Reset */
@@ -33,7 +37,6 @@
         main {
             height: 60px;
             display: flex;
-            /*padding: 5px;*/
             border-radius: 5px;
             background: {{ background_color }};
         }
@@ -55,11 +58,6 @@
             height: 55px;
             padding: 2.5px 0px 0px 2.5px;
             border-radius: 4px;
-            /*{% if theme == 'dark' %}
-                box-shadow: 0 0 4px 1px #1b2027;
-            {% else %}
-                box-shadow: 0 0 4px 1px #f1f3f5;
-            {% endif %}*/
         }
         section {
             margin: 0px 2.5px 0px 2.5px;
