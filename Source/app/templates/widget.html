@@ -29,7 +29,7 @@
         }
         .scan-code {
             transform-origin: top right;
-            transform: rotate(270deg) translateY(-40px);
+            transform: rotate(270deg); /* translateY(-40px);*/
             width: 30px;
             height: 100%;
             border-radius: 5px;
@@ -38,9 +38,6 @@
             width: 100%;
             display: flex;
             position: relative;
-            /*{% if base_64_scan_code %}
-                left: -70px;
-            {% endif %}*/
         }
         .cover {
             width: 55px;
@@ -114,11 +111,7 @@
             height: 30px;
             transform-origin: bottom;
             animation: resize 0ms -800ms ease-in-out infinite alternate;
-            {% if base_64_scan_code %}
-                width: 16px;
-            {% else %}
-                width: 15px;
-            {% endif %}
+            width: 15px;
         }
         .bar:not(:first-child) {
             margin-left: 5px;
@@ -141,13 +134,6 @@
       </style>
       <a href="https://github.com/tthn0/Spotify-Readme" target="_blank">
         <main>
-          {% if base_64_scan_code %}
-          <img
-            class="scan-code"
-            src="data:image/png;base64, {{base_64_scan_code}}"
-            alt="Scan Code"
-          />
-          {% endif %}
           <aside>
             <img
               class="cover"
@@ -157,19 +143,17 @@
             <section>
               <div class="info">
                 <div class="top">
-                  {% if not base_64_scan_code %}
-                  <!-- img
-                    class="logo"
-                    src="data:image/png;base64, {{logo}}"
-                    alt="Spotify Logo"
-                  / -->
-                  {% endif %}
                   <h1>{{track_name}}</h1>
                 </div>
                 <p>{{track_artist}}</p>
               </div>
               <div class="bar-container">{{eq_bars_html|safe}}</div>
             </section>
+            <img
+              class="scan-code"
+              src="data:image/png;base64, {{base_64_scan_code}}"
+              alt="Scan Code"
+            />
           </aside>
         </main>
       </a>
